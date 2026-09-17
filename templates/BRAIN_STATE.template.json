@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "project_id": "SUE-AGENT-LAB-2026",
+  "status": "ACTIVE",
+  "active_brain_thread_id": "REPLACE_WITH_MAIN_THREAD_ID",
+  "active_brain_label": "Sue Agent Lab current Main Agent",
+  "exclusive_main_owner": true,
+  "supersedes_thread_id": null,
+  "updated_at": "REPLACE_WITH_ISO_TIMESTAMP",
+  "current_phase": "deployment validation",
+  "current_user_request": "Deploy and operate Sue Agent Lab.",
+  "takeover_rule": "Read the handoff, then atomically claim with the new thread id and expected prior owner before dispatch or authoritative writes.",
+  "dispatch_rule": "Only the active Main Agent may dispatch visible Workers, relay results, finalize a run, or write authoritative project results.",
+  "current_runtime_status": {
+    "visible_mode": "NOT_VALIDATED",
+    "strict_gate_0": "NOT_RUN",
+    "fake_backend": "NOT_RUN",
+    "strict_r1": "NOT_RUN",
+    "strict_r2": "NOT_RUN",
+    "strict_stale_recovery": "NOT_RUN",
+    "active_visible_run_id": null
+  },
+  "next_stage": "Run local tests, then create and validate visible Workers.",
+  "takeover_command": "python3 -m orchestrator.brain_takeover --thread-id <new> --expected-owner <old>",
+  "ownership_history": []
+}
