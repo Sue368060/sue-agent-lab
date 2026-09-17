@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "default_mode": "small",
+  "workers": {
+    "A": {
+      "thread_id": "REPLACE_WITH_A_THREAD_ID",
+      "model": "gpt-5.6-luna",
+      "thinking": "high",
+      "role": null,
+      "generation": 1,
+      "exclusive_owner": true,
+      "previous_thread_ids": [],
+      "takeover_history": [],
+      "chat_archive_path": ".ai/projects/SUE-AGENT-LAB-2026/workers/A/chats/codex-REPLACE_WITH_A_THREAD_ID.md"
+    },
+    "B": {
+      "thread_id": "REPLACE_WITH_B_THREAD_ID",
+      "model": "gpt-5.6-luna",
+      "thinking": "high",
+      "role": null,
+      "generation": 1,
+      "exclusive_owner": true,
+      "previous_thread_ids": [],
+      "takeover_history": [],
+      "chat_archive_path": ".ai/projects/SUE-AGENT-LAB-2026/workers/B/chats/codex-REPLACE_WITH_B_THREAD_ID.md"
+    },
+    "C": {
+      "thread_id": "REPLACE_WITH_C_THREAD_ID",
+      "model": "gpt-5.6-terra",
+      "thinking": "low",
+      "role": null,
+      "generation": 1,
+      "exclusive_owner": true,
+      "previous_thread_ids": [],
+      "takeover_history": [],
+      "chat_archive_path": ".ai/projects/SUE-AGENT-LAB-2026/workers/C/chats/codex-REPLACE_WITH_C_THREAD_ID.md"
+    },
+    "D": {
+      "thread_id": "REPLACE_WITH_D_THREAD_ID",
+      "model": "gpt-5.6-sol",
+      "thinking": "low",
+      "role": null,
+      "generation": 1,
+      "exclusive_owner": true,
+      "previous_thread_ids": [],
+      "takeover_history": [],
+      "chat_archive_path": ".ai/projects/SUE-AGENT-LAB-2026/workers/D/chats/codex-REPLACE_WITH_D_THREAD_ID.md"
+    }
+  },
+  "modes": {
+    "small": {
+      "worker_ids": [
+        "A",
+        "B"
+      ],
+      "review_policy": "none",
+      "max_worker_turns": 2,
+      "max_review_rounds": 0,
+      "max_blocker_revisions": 0,
+      "max_blocker_rechecks": 0,
+      "thinking_overrides": {
+        "A": "medium",
+        "B": "medium"
+      },
+      "worker_deadline_seconds": 300,
+      "target_elapsed_seconds": 480,
+      "capacity_floor": 1
+    },
+    "large": {
+      "worker_ids": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "review_policy": "none",
+      "max_worker_turns": 4,
+      "max_review_rounds": 0,
+      "max_blocker_revisions": 0,
+      "max_blocker_rechecks": 0,
+      "worker_deadline_seconds": 480,
+      "target_elapsed_seconds": 720,
+      "capacity_floor": 2
+    },
+    "small_reviewed": {
+      "worker_ids": [
+        "A",
+        "B"
+      ],
+      "review_policy": "full",
+      "max_worker_turns": 8,
+      "max_review_rounds": 1,
+      "max_blocker_revisions": 2,
+      "max_blocker_rechecks": 2,
+      "worker_deadline_seconds": 300,
+      "target_elapsed_seconds": 900,
+      "capacity_floor": 1
+    },
+    "large_reviewed": {
+      "worker_ids": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "review_policy": "full",
+      "max_worker_turns": 12,
+      "max_review_rounds": 1,
+      "max_blocker_revisions": 2,
+      "max_blocker_rechecks": 2,
+      "worker_deadline_seconds": 480,
+      "target_elapsed_seconds": 1500,
+      "capacity_floor": 2
+    }
+  },
+  "external_review": {
+    "default_rounds": 0,
+    "explicit_request_rounds": 1,
+    "automatic_recheck": false
+  },
+  "delivery_contract": {
+    "inline_full_result": true,
+    "final_artifact_must_be_inline": true,
+    "files_are_supplements": true,
+    "must_cover_every_worker": true,
+    "minimum_inline_chars": 800,
+    "minimum_final_to_longest_worker_ratio": 0.75,
+    "minimum_worker_output_chars": 200,
+    "minimum_worker_overlap_chars": 24,
+    "minimum_section_chars": 40,
+    "maximum_repeated_ngram_ratio": 0.2,
+    "maximum_section_similarity_ratio": 0.6,
+    "minimum_synthesis_to_longest_worker_ratio": 0.25,
+    "required_sections": [
+      "recommended_decision",
+      "detailed_plan",
+      "budget_or_resources",
+      "alternatives",
+      "risks_and_unknowns",
+      "next_actions"
+    ],
+    "section_heading_aliases": {
+      "recommended_decision": [
+        "推荐结论",
+        "Recommended decision"
+      ],
+      "detailed_plan": [
+        "详细方案",
+        "Detailed plan"
+      ],
+      "budget_or_resources": [
+        "预算与资源",
+        "预算资源",
+        "Budget and resources"
+      ],
+      "alternatives": [
+        "备选方案",
+        "Alternatives"
+      ],
+      "risks_and_unknowns": [
+        "风险与未知项",
+        "风险未知",
+        "Risks and unknowns"
+      ],
+      "next_actions": [
+        "下一步行动",
+        "下一步动作",
+        "Next actions"
+      ]
+    }
+  },
+  "context_policy": {
+    "rotation_recommended_after_completed_turns": 8,
+    "send_self_contained_prompt": true,
+    "do_not_relay_full_peer_transcript": true,
+    "low_cost_guard": {
+      "enabled_on_explicit_low_cost_request": true,
+      "max_recent_input_tokens": 50000,
+      "on_exceed": "rotate_worker_task",
+      "usage_unavailable_fallback": "max_llm_calls"
+    }
+  },
+  "runtime_backoff": {
+    "max_steps": 2,
+    "retry_after_seconds": [
+      5,
+      15
+    ],
+    "busy_state": "BACKOFF",
+    "unavailable_state": "DEGRADE_OR_STOP"
+  },
+  "auto_retry": 0,
+  "auto_model_fallback": false,
+  "final_owner": "main_task"
+}
