@@ -1,0 +1,11 @@
+{
+  "reviewed_at": "2026-09-14",
+  "source": "local app-server model/list plus human manual_only annotation",
+  "models": {
+    "gpt-5.6-sol": {"manual_only": false},
+    "gpt-5.6-terra": {"manual_only": false},
+    "gpt-5.6-luna": {"manual_only": false},
+    "gpt-5.5": {"manual_only": false},
+    "gpt-6-astra": {"manual_only": true}
+  }
+}
