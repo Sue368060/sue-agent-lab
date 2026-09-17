@@ -1,0 +1,341 @@
+{
+  "package": "Sue-Agent-Lab-Portable",
+  "version": "1.0-v2.7.2",
+  "generated": "2026-09-17T13:51:11+08:00",
+  "purpose": "Reproduce the hardened short-context Main Agent plus replaceable visible A/B or A/B/C/D collaboration workflow",
+  "source_files": 62,
+  "deployment_mutable_files": [
+    "orchestrator/visible_modes.json"
+  ],
+  "reference_validation": {
+    "standard_discovery": "155 PASS",
+    "portable_doctor": "PASS before deployment; PASS with --require-deployed-ids after roster installation"
+  },
+  "excluded": [
+    "real thread IDs",
+    "chat transcripts",
+    "runtime ledgers and lock files",
+    "caches",
+    "credentials",
+    "PDF/photo/screenshot bodies"
+  ],
+  "known_platform_boundaries": [
+    "strict provider-side model/build attestation",
+    "OS-enforced read-only Shared-Memory for ordinary visible tasks",
+    "third-party immutable ledger anchor",
+    "automatic cross-device sync without transferring Shared-Memory",
+    "Codex UI message-level archive hook"
+  ],
+  "files": [
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 9615,
+      "sha256": "124f80b9888d32283445e64e47634074ebd1e4168901a9a720506f191571250b"
+    },
+    {
+      "path": "README-FIRST.md",
+      "bytes": 1184,
+      "sha256": "0c0747491f0341a06e9af71c4f80ddc8e7f986732a2e00da792ba533250915f2"
+    },
+    {
+      "path": "orchestrator/AGENT_ROLES.md",
+      "bytes": 755,
+      "sha256": "b8a144fb6a4df937cd3fbb2350c5246ec60c360e06a3863d35cc3368e5fb7507"
+    },
+    {
+      "path": "orchestrator/ARCHITECTURE.md",
+      "bytes": 1640,
+      "sha256": "a9e4b2d53e7956eefb99dc0abcc9e5257a78c798b45d05772eb70a6eef0843ed"
+    },
+    {
+      "path": "orchestrator/CHANGELOG.md",
+      "bytes": 8426,
+      "sha256": "64956c48d1b9a2228b8d3bc07b6eab2d2c2e040e21304ea5ca798fdd57a5b3d1"
+    },
+    {
+      "path": "orchestrator/MEMORY_PROTOCOL.md",
+      "bytes": 2214,
+      "sha256": "1fb22828be5b33dacce305779cca549733221f63844d1f116eba286381979bb2"
+    },
+    {
+      "path": "orchestrator/MESSAGE_PROTOCOL.md",
+      "bytes": 880,
+      "sha256": "cdc6572054b393b889f5991cc9b62254e6acc9ff26e2f78a1e21bdea3fc28100"
+    },
+    {
+      "path": "orchestrator/MODEL_ROUTING.md",
+      "bytes": 858,
+      "sha256": "82939913a6f91ddba5c88a10a34f157351598e212b9deca163de2f5f2ed1134d"
+    },
+    {
+      "path": "orchestrator/README.md",
+      "bytes": 5521,
+      "sha256": "cc5bd5230d4d6a28d0da283c843195a45d8e2bb6685452e44f3d35a5d167e098"
+    },
+    {
+      "path": "orchestrator/RECOVERY.md",
+      "bytes": 1004,
+      "sha256": "ddb1ee848fcafcbd8b4a35b0975b6a72074bcddf62beb8e36edf11c4b63ae9b9"
+    },
+    {
+      "path": "orchestrator/SUE_QUICK_START.md",
+      "bytes": 862,
+      "sha256": "d17c9ad9aaa0d100e2c70c06139a934da69be6186133998682c094fc7b7d974a"
+    },
+    {
+      "path": "orchestrator/TEST_REPORT.md",
+      "bytes": 9404,
+      "sha256": "4e5ca780de2ebb6fbd9b15d415f54327fb991fd95e4962e831319df478d83da3"
+    },
+    {
+      "path": "orchestrator/USER_GUIDE.md",
+      "bytes": 2007,
+      "sha256": "3f64ed576441fdbb5148e50006b186ebcf52a76f323e79e5b5eb2420b21e0acb"
+    },
+    {
+      "path": "orchestrator/__init__.py",
+      "bytes": 66,
+      "sha256": "a2113c60e3cdc258339740bc54d9cc76eaed3a1348e8eab747cd8f2081693679"
+    },
+    {
+      "path": "orchestrator/__main__.py",
+      "bytes": 135,
+      "sha256": "73527b88746b66ec5f5acc2b8fd8c71d5b4e52b13c9b42b6c641e387c261e1d2"
+    },
+    {
+      "path": "orchestrator/backends.py",
+      "bytes": 9279,
+      "sha256": "d6709244e305de26ed5fea25db9576ef856ecfac649902ec5f956802673191bb"
+    },
+    {
+      "path": "orchestrator/brain_takeover.py",
+      "bytes": 7167,
+      "sha256": "4c62a2690537023d78b874cd5da7917348774a816e0d0b585140d9b4fe5f6e0e"
+    },
+    {
+      "path": "orchestrator/cli.py",
+      "bytes": 10424,
+      "sha256": "eeb0db8e129307eba35711b50aac051eef169abb25be57eefe23fc7da18728e2"
+    },
+    {
+      "path": "orchestrator/context_pack.py",
+      "bytes": 13218,
+      "sha256": "977431abaca550516cb35baa4ae80dfbdb83890045e0588c5289aa78520c8a39"
+    },
+    {
+      "path": "orchestrator/delivery_contract.py",
+      "bytes": 9240,
+      "sha256": "d1ddd185870c9dca9b73f44bd3c0c53a1e08e79237262c1ea855764a49baf626"
+    },
+    {
+      "path": "orchestrator/external_identity.py",
+      "bytes": 5871,
+      "sha256": "3e3847440f32d40057d162b4c4c4f1fb7bac5145b4c5f372cfaed75ece3dd8cf"
+    },
+    {
+      "path": "orchestrator/extract_local_codex_chat.zsh",
+      "bytes": 4903,
+      "sha256": "38173df832d41259c1aeb4dfceff6d033feef75f08a65247ca6e34a1fa1a8f80"
+    },
+    {
+      "path": "orchestrator/final_gate.py",
+      "bytes": 8184,
+      "sha256": "f213294488f8248a8e592202ab9e3abd821cde2c09614e7a7b0ac79a319f79bb"
+    },
+    {
+      "path": "orchestrator/lab.py",
+      "bytes": 34230,
+      "sha256": "7eab0afae2ccb99a665afed1fe9ec408395272160ef30468cc417e29ca84f633"
+    },
+    {
+      "path": "orchestrator/portable_doctor.py",
+      "bytes": 8294,
+      "sha256": "7a6c8c8b890eb879ef11779032b8d94801ff427aea943532c3b540d50cb82d65"
+    },
+    {
+      "path": "orchestrator/programmatic_main.py",
+      "bytes": 11971,
+      "sha256": "f7f0987e9c0f8f4562d17a7cd4c2bc5a9e7cb6f07fb487601e7100c9daf4aa61"
+    },
+    {
+      "path": "orchestrator/short_context_contract.py",
+      "bytes": 33829,
+      "sha256": "2ffa0b190289cf441e1e7e7e85b03af2199279eb11df5fe4382477e43df73119"
+    },
+    {
+      "path": "orchestrator/test_brain_takeover.py",
+      "bytes": 5272,
+      "sha256": "25e955ef1fbafe26890326f317232d1fc78262d6bace1fde2ab51b470c460ec8"
+    },
+    {
+      "path": "orchestrator/test_context_pack.py",
+      "bytes": 10150,
+      "sha256": "e07f776a3805e662c6ec0a3cfc8b5547fb38da639d31c5e902f339bcc5a337ec"
+    },
+    {
+      "path": "orchestrator/test_delivery_contract.py",
+      "bytes": 7343,
+      "sha256": "a857fe5bbc12bdd9562c748f97d2ae92c0cdfbf841b556d28b84e5e2d95fbc48"
+    },
+    {
+      "path": "orchestrator/test_external_identity.py",
+      "bytes": 3458,
+      "sha256": "db5442de8aa2788412421977c0d5372ba8aea65b151dc2d840a1ebedec6cea0c"
+    },
+    {
+      "path": "orchestrator/test_final_gate.py",
+      "bytes": 6593,
+      "sha256": "06c1f81d6b4f2f0db20c469b369c352972b2b16cf9eca5a0cf103076d6d3ec81"
+    },
+    {
+      "path": "orchestrator/test_lab.py",
+      "bytes": 7095,
+      "sha256": "0e0de59d30b647882a93aca201807e94c148e40538a8ab6f1c39ad73ee3738ea"
+    },
+    {
+      "path": "orchestrator/test_portable_doctor.py",
+      "bytes": 4860,
+      "sha256": "ef97ea166aac39172e4b907ce7904431fae55f4605b1b45621e9c54b307d0455"
+    },
+    {
+      "path": "orchestrator/test_programmatic_main.py",
+      "bytes": 8810,
+      "sha256": "28278fef148e49720be8febff2176093223bbdf45e58893ec5420590be8be1d6"
+    },
+    {
+      "path": "orchestrator/test_short_context_contract.py",
+      "bytes": 13095,
+      "sha256": "ac1b4d1f95c3449c88e25ec35b80f5ec05ef38c22f4afb31be4edb1739aff296"
+    },
+    {
+      "path": "orchestrator/test_visible_capacity.py",
+      "bytes": 3111,
+      "sha256": "7c597e9493cd983aaaa62bde5deb0df1ee5373b00418a1f323182177acdcdbe1"
+    },
+    {
+      "path": "orchestrator/test_visible_cost_guard.py",
+      "bytes": 3493,
+      "sha256": "b0b87c81f0814cda952cdbbefdb30204b38d6ced780a9c53bd49ba354060ba82"
+    },
+    {
+      "path": "orchestrator/test_visible_ledger.py",
+      "bytes": 42428,
+      "sha256": "2e3e63d571c68c8a7e23844e6e572e30cc114094daea3ae04bb38c3275643d5c"
+    },
+    {
+      "path": "orchestrator/test_visible_modes.py",
+      "bytes": 4493,
+      "sha256": "55cf80ab04e521c9b766b5d228d2dc713b90408d7a17ac8f07ab8ef4058406ba"
+    },
+    {
+      "path": "orchestrator/test_visible_reader.py",
+      "bytes": 2615,
+      "sha256": "b023da907f3576a95e17c55628c05db0f1f6a0443894c65b2d3d2bcc1c846813"
+    },
+    {
+      "path": "orchestrator/test_visible_v24_e2e.py",
+      "bytes": 7743,
+      "sha256": "ff156ba20b1c7866f091b4966427ddad8f6d8cc5d715d065e7a9fee8cc132a84"
+    },
+    {
+      "path": "orchestrator/test_worker_memory.py",
+      "bytes": 7959,
+      "sha256": "f54fb83e294a666b0e10ca9e39d3127c374f88334f5797453a90390281b68f3b"
+    },
+    {
+      "path": "orchestrator/v101/README.md",
+      "bytes": 5289,
+      "sha256": "f329f57561de040a800f988e989fc2bfa5aec41004bb88de6d4ea1655540dbf6"
+    },
+    {
+      "path": "orchestrator/v101/__init__.py",
+      "bytes": 45,
+      "sha256": "981490752d40c86c79bcde9d90bf5b75b74801044bfcd1e7ecef0c46884d45df"
+    },
+    {
+      "path": "orchestrator/v101/backend.py",
+      "bytes": 19034,
+      "sha256": "49b905ef3aef55cff2f1091e3211d17da53a08fec211e8172d79290708389126"
+    },
+    {
+      "path": "orchestrator/v101/cli.py",
+      "bytes": 4823,
+      "sha256": "9842d6f336d4ef4813c8b44f21abd989054855f3339ec50c19200917c6c33589"
+    },
+    {
+      "path": "orchestrator/v101/lab.py",
+      "bytes": 31727,
+      "sha256": "f49f2dc28ab5c66552ed8a44984ffe6c4b872ae5d410460fc82ad46c6bb8162f"
+    },
+    {
+      "path": "orchestrator/v101/model_registry.json",
+      "bytes": 342,
+      "sha256": "a4ea1453ca5c2178fd4725ffeb0279cf3eb8fe817d5291e7ee7983daf5060728"
+    },
+    {
+      "path": "orchestrator/v101/test_v101.py",
+      "bytes": 37144,
+      "sha256": "e5b4be237ba229d7aeff62310b5c09e3f98a578f804e90dbb5e425a78d67b98f"
+    },
+    {
+      "path": "orchestrator/visible_capacity.py",
+      "bytes": 5010,
+      "sha256": "cdb335ff260af6fae6035629f85e5baf8b2e25e5e6b370f49183acb0bc1fd659"
+    },
+    {
+      "path": "orchestrator/visible_cost_guard.py",
+      "bytes": 6157,
+      "sha256": "067bdd7a2a9ad77d2039628fe1758a13db90431eff9118c56bb54d90e057ab27"
+    },
+    {
+      "path": "orchestrator/visible_ledger.py",
+      "bytes": 65829,
+      "sha256": "f94e356835645eab1b527a4dd9fed2c93befd3a0ac38cbf2134484110f458a8d"
+    },
+    {
+      "path": "orchestrator/visible_modes.json",
+      "bytes": 5174,
+      "sha256": "80d38baf7364a99b7fa3af701f9b2e189b63f2da961874f2111c1d843bbed5b9"
+    },
+    {
+      "path": "orchestrator/visible_modes.py",
+      "bytes": 15653,
+      "sha256": "46a749449c25c0e44dc3f64b84efb07ca1a257077091d7bfc94abaa9eef4a9b5"
+    },
+    {
+      "path": "orchestrator/visible_reader.py",
+      "bytes": 4593,
+      "sha256": "e2794f9e0346e2a4eac96424da522f0e096915e0a6a6d3a1b7590576e5cefdb9"
+    },
+    {
+      "path": "orchestrator/worker_memory.py",
+      "bytes": 17821,
+      "sha256": "a666bfedff0db8627adc5765787d32627884ddf8c92a801a85770ac328af6856"
+    },
+    {
+      "path": "templates/BRAIN_HANDOFF.template.md",
+      "bytes": 1000,
+      "sha256": "296b1ecdf3b10485a619eb01a407e6b899002af177c7fc3c98ff46d1474956a5"
+    },
+    {
+      "path": "templates/BRAIN_STATE.template.json",
+      "bytes": 1198,
+      "sha256": "38b6bfe0d9d190371eddeecb4810c3bd5f16ef37d08c34c82222124505bf5b9d"
+    },
+    {
+      "path": "templates/CURRENT_TASK.template.md",
+      "bytes": 539,
+      "sha256": "29f353ff09cacb4f9556b8ce341dd7b90194152d733d1ae7cda9b219648d2cf8"
+    },
+    {
+      "path": "templates/EXTERNAL_IDENTITIES.template.json",
+      "bytes": 46,
+      "sha256": "ca14aff8de2dd7ca79f840ca659fec191df634d252d45900660b97688c4e0247"
+    },
+    {
+      "path": "templates/visible_modes.template.json",
+      "bytes": 5174,
+      "sha256": "80d38baf7364a99b7fa3af701f9b2e189b63f2da961874f2111c1d843bbed5b9"
+    }
+  ]
+}
